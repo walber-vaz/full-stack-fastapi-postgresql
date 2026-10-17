@@ -46,7 +46,7 @@ jobs:
         with:
           python-version-file: .python-version
       - name: Setup uv
-        uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
         with:
           version: "latest-known"
           cache-dependency-glob: |
@@ -88,7 +88,7 @@ jobs:
             git commit -m "🎨 Auto format and update with pre-commit"
             git push
           fi
-      - uses: pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43 # v1.1.0
+      - uses: pre-commit-ci/lite-action@062bca0919bc9d6e66755cc05074b70c77e111fc # v1.2.0
         if: env.CAN_PUSH == 'false'
         with:
           msg: 🎨 Auto format and update with pre-commit
